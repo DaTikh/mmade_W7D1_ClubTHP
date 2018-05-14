@@ -30,11 +30,11 @@ Pour tester l'application en local, une fois dans le dossier cloné :
       ```
         @ rails test
       ```
-      +  Exos 2.2 à 2.4.1 :
+      +  Exos 2.2 jusqu'à 2.4.1 :
       ```
        @ rails test:system
       ```
-       * **Attention : L'intégralité des tests des exos 2.2 à la fin sont des tests system, n'oublie pas de le préciser dans la commande ! ;)**
+       * **Attention : L'intégralité des tests des exos 2.2 jusqu'à la fin sont des tests system, n'oublie pas de le préciser dans la commande ! ;)**
 
   - Si tu veux naviguer un peu sur l'application en local, pour lancer le serveur :
 ```

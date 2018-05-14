@@ -15,16 +15,9 @@
     <li class="nav-item">
       <%= link_to "Mon profil", profile_path(current_user), class: "nav-link navbar-brand btn-sm btn-info" %>
     </li>
-    <div class="btn-group">
-      <li type="button" class="navbar-brand btn-sm btn-warning text-white dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        Mon compte
-      </li>
-        <div class="dropdown-menu">
-          <li><%= link_to "Editer mon profil", "#", class: "dropdown-item" %></li>
-          <div class="dropdown-divider"></div>
-          <li><%= link_to "Se déconnecter", log_out_path, method: :delete, class: "dropdown-item" %></li>
-        </div>
-    </div>
+    <li class="nav-item">
+      <%= link_to "Se déconnecter", log_out_path, method: :delete, class: "nav-link navbar-brand btn-sm btn-warning" %>
+    </li>
 
     <% else %>
 

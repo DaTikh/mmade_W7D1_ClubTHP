@@ -1,9 +1,13 @@
-<h1>Profil de <%= @user.firstname.capitalize %> <%= @user.lastname.capitalize %></h1>
+<h1 class="text-center">Profil de <%= @user.firstname.capitalize %> <%= @user.lastname.capitalize %></h1>
 
-<div class="container border border-primary">
+<div class="row justify-content-center">
+  <div class="col-lg-6 border border-primary">
     <p>Email : <%= @user.email %></p>
-</div>
+  </div>
 
+  <div class="row">
 <% if current_user == @user %>
  <%= link_to "Modifier le profil", edit_user_path(@user), class: "btn btn-primary" %>
 <% end %>
+  </div>
+</div>

@@ -1,17 +1,20 @@
 class SessionsController < ApplicationController
 
+  def index
+  end
+
   def new
   end
 
   def create
-    if User.ids.include?(params[:session][:id])
+    if User.find_by_id(params[:session][:id])
      user = User.find(params[:session][:id])
       if user
         log_in user
-        redirect_to root
+        redirect_to root_path
       end
     else
-      flash.now[:danger] = "ID inconnue"
+      flash.now[:alert] = "ID inconnue"
       render 'new'
     end
   end

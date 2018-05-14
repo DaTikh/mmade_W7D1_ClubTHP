@@ -1,0 +1,8 @@
+<h1>Liste des membres</h1>
+
+<% User.all.each do |u| %>
+  <div class="container border border-primary">
+    <p><%= u.firstname.capitalize %> <%= u.lastname.capitalize %></p>
+    <p>Email : <%= u.email %></p>
+  </div>
+<% end %>

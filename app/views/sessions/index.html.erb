@@ -1,0 +1,13 @@
+<h1>Index du site</h1>
+
+<% if logged_in? %>
+  <p>ID du compte : <%= current_user.id %></p>
+  <%= link_to "Liste des membres", users_path, class: "btn btn-success" %>
+
+<% else %>
+
+  <p>Vous devez vous connecter pour afficher la liste des membres.</p>
+  <%= link_to "S'inscrire", sign_up_path, class: "btn btn-primary" %>
+  <%= link_to "Se connecter", log_in_path, class: "btn btn-success" %>
+
+<% end %>

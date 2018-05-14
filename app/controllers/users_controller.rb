@@ -7,11 +7,19 @@ class UsersController < ApplicationController
   def create
     @user = User.new(params_user)
       if @user.save
-        redirect_to root
+        log_in @user
+        redirect_to root_path
       else
-        flash.now[:danger] = "Veuillez remplir tous les champs."
+        flash.now[:alert] = "Veuillez remplir tous les champs."
         render "new"
       end
+  end
+
+  def index
+    if !logged_in?
+      flash[:alert] = "Vous n'êtes pas connecté."
+      redirect_to root_path
+    end
   end
 
   private

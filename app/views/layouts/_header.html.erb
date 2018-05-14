@@ -10,7 +10,7 @@
     <% if logged_in? %>
 
     <li class="nav-item">
-      <%= link_to "Mon profil", "#", class: "navlink navbar-brand btn-sm btn-primary" %>
+      <%= link_to "Liste des membres", users_path, class: "nav-link navbar-brand btn-sm btn-success" %>
     </li>
     <div class="btn-group">
       <li type="button" class="navbar-brand btn-sm btn-warning text-white dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -26,7 +26,7 @@
     <% else %>
 
     <li class="nav-item">
-      <%= link_to "S'inscrire", "#", class: "nav-link navbar-brand btn-sm btn-primary" %>
+      <%= link_to "S'inscrire", sign_up_path, class: "nav-link navbar-brand btn-sm btn-primary" %>
     </li>
     <li class="nav-item">
       <%= link_to "Se connecter", log_in_path, class: "nav-link navbar-brand btn-sm btn-success" %>

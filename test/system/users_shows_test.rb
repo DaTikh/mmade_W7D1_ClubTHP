@@ -18,13 +18,13 @@ class UsersShowsTest < ApplicationSystemTestCase
     visit log_in_path
     fill_in "id", with: "1"
     click_button "Log in"
-    visit profile_path
+    visit profile_path(@u1)
     assert_selector "h1", text: "Profil de Bab Bab"
     assert_text "truc@truc.truc"
   end
 
   test "visitor can't access profile" do
-    visit profile_path(@u1.id)
+    visit profile_path(@u1)
     assert_text "Vous n'êtes pas connecté."
   end
 
@@ -32,7 +32,7 @@ class UsersShowsTest < ApplicationSystemTestCase
     visit log_in_path
     fill_in "id", with: "1"
     click_button "Log in"
-    visit profile_path(@u2.id)
+    visit profile_path(@u2)
     assert_text "Accès refusé."
   end
 

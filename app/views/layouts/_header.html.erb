@@ -1,0 +1,39 @@
+<header>
+<div id="header">
+  <ul class="navbar nav justify-content-left bg-dark">
+    <li class="nav-item">
+      <%= link_to "Home", root_path, class: "nav-link navbar-brand btn btn-danger" %>
+    </li>
+
+    <ul class="nav navbar justify-content-center nav-pills">
+
+    <% if logged_in? %>
+
+    <li class="nav-item">
+      <%= link_to "Mon profil", "#", class: "navlink navbar-brand btn-sm btn-primary" %>
+    </li>
+    <div class="btn-group">
+      <li type="button" class="navbar-brand btn-sm btn-warning text-white dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Mon compte
+      </li>
+        <div class="dropdown-menu">
+          <li><%= link_to "Editer mon profil", "#", class: "dropdown-item" %></li>
+          <div class="dropdown-divider"></div>
+          <li><%= link_to "Se déconnecter", log_out_path, method: :delete, class: "dropdown-item" %></li>
+        </div>
+    </div>
+
+    <% else %>
+
+    <li class="nav-item">
+      <%= link_to "S'inscrire", "#", class: "nav-link navbar-brand btn-sm btn-primary" %>
+    </li>
+    <li class="nav-item">
+      <%= link_to "Se connecter", log_in_path, class: "nav-link navbar-brand btn-sm btn-success" %>
+    </li>
+
+    <% end %>
+    </ul>
+  </ul>
+</div>
+</header>

@@ -1,0 +1,23 @@
+<div class="container">
+  <h3>Modifier le profil</h3>
+
+    <%= form_for current_user, url: {action: "update"} do |u| %>
+      <div class="form-group">
+          <%= u.label "Prénom :" %><br>
+          <%= u.text_field :firstname, id: :firstname %><br>
+      </div>
+      <div class="form-group">
+          <%= u.label "Nom :" %><br>
+          <%= u.text_field :lastname, id: :lastname %><br>
+      </div>
+      <div class="form-group">
+          <%= u.label "Email :" %><br>
+          <%= u.text_field :email, id: :email %><br>
+      </div>
+      <div class="form-group">
+          <%= u.submit "Enregistrer les modifications", class: "btn btn-primary" %>
+      </div>
+
+      <% end %>
+
+</div>

@@ -4,5 +4,6 @@
   <div class="container border border-primary">
     <p><%= u.firstname.capitalize %> <%= u.lastname.capitalize %></p>
     <p>Email : <%= u.email %></p>
+    <%= link_to "Voir le profil", profile_path(u), class: "btn btn-info" %>
   </div>
 <% end %>

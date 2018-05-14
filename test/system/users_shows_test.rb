@@ -33,7 +33,8 @@ class UsersShowsTest < ApplicationSystemTestCase
     fill_in "id", with: "1"
     click_button "Log in"
     visit profile_path(@u2)
-    assert_text "Accès refusé."
+    assert_text "Profil de Max Max"
+    assert_text "chose@chose.chose"
   end
 
 end

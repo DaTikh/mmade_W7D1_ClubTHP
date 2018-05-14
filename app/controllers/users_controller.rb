@@ -10,7 +10,7 @@ class UsersController < ApplicationController
         log_in @user
         redirect_to root_path
       else
-        flash.now[:alert] = "Veuillez remplir tous les champs."
+        flash.now[:alert] = @user.errors.full_messages.join("")
         render "new"
       end
   end

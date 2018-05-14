@@ -4,15 +4,15 @@
         <%= form_for @user, url: {action: "create"} do |u| %>
         <div class="form-group">
             <%= u.label "Prénom :" %><br>
-            <%= u.text_field :firstname %><br>
+            <%= u.text_field :firstname, id: :firstname %><br>
         </div>
         <div class="form-group">
             <%= u.label "Nom :" %><br>
-            <%= u.text_field :lastname %><br>
+            <%= u.text_field :lastname, id: :lastname %><br>
         </div>
         <div class="form-group">
             <%= u.label "Email :" %><br>
-            <%= u.text_field :email %><br>
+            <%= u.text_field :email, id: :email %><br>
         </div>
         <div class="form-group">
             <%= u.submit "Créer un compte", class: "btn btn-primary" %>

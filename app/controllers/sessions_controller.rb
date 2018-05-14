@@ -15,7 +15,7 @@ class SessionsController < ApplicationController
       end
     else
       flash.now[:alert] = "ID inconnue"
-      render 'new'
+      render "new"
     end
   end
 

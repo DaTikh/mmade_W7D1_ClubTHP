@@ -50,7 +50,9 @@ Pour tester l'application en local, une fois dans le dossier cloné :
 ## Versions
 
 **Ruby 2.5.1**
+
 **Rails 5.2.0**
+
 **Bundle 1.16.1**
 
 ## Contributeurs
